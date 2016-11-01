@@ -50,12 +50,12 @@ abstract class abstract_factory_class
                         $params[] = func_get_arg($i);
                     }
 
-                    $result = call_user_func_array(array($factory_obj, $factory_method), $params);
-                    if($result) {
-                        return $result;
-                    } else {
-                        exit("ERROR: PLEASE CHECK PARAMS!");
-                    }
+                    return $result = call_user_func_array(array($factory_obj, $factory_method), $params);
+                    // if($result) {
+                    //     return $result;
+                    // } else {
+                    //     exit("ERROR: PLEASE CHECK PARAMS!");
+                    // }
                 }
 
                 return $factory_obj->$factory_method();
